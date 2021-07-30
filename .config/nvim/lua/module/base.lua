@@ -3,9 +3,10 @@ vim.cmd("filetype plugin indent on")
 
 local o = vim.opt
 
+vim.g.autosave   = true
 o.relativenumber = true
 o.undofile       = true 
-o.cursorline     = true
+o.cursorline     = false
 o.expandtab      = true
 o.autowrite      = true
 o.hidden         = true
@@ -22,9 +23,6 @@ o.startofline    = false
 o.termguicolors  = true
 o.wrap           = false
 
-vim.o.completeopt = "menuone,noinsert,noselect"
-vim.o.shortmess = vim.o.shortmess .. "c"
-
 o.encoding       = "UTF-8"
 o.fillchars      = {
   vert = "│",
@@ -32,6 +30,7 @@ o.fillchars      = {
   fold = " ",
   diff = " ",
 }
+
 o.foldopen       = {
   "percent",
   "search",
@@ -49,18 +48,17 @@ o.shell          = "/usr/bin/zsh"
 o.laststatus     = 2
 o.pumheight      = 15
 o.re             = 0
-o.scrolloff      = 4
-o.sidescroll     = 4
+o.scrolloff      = 3
+o.sidescroll     = 3
 o.shiftwidth     = 2
-o.sidescrolloff  = 15
 o.tabstop        = 2
+o.sidescrolloff  = 15
 o.timeoutlen     = 400
 o.updatetime     = 1000
 o.joinspaces     = false
 
-vim.cmd("set foldmethod=marker")
+vim.wo.foldmethod = 'marker'
 
 -- colorscheme
-vim.cmd("colorscheme codedark")
-vim.cmd("hi Folded ctermfg=245")
-vim.cmd("set guicursor=i:block")
+vim.o.background = "dark"
+vim.cmd([[set guicursor=i:block]])

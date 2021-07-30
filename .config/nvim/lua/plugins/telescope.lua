@@ -1,6 +1,6 @@
 local vimp = require('vimp')
-vimp.nnoremap('tf', ':Telescope find_files<cr>')
-vimp.nnoremap('tr', ':Telescope live_grep<cr>')
+vimp.nnoremap('<leader>tf', ':Telescope find_files<cr>')
+vimp.nnoremap('<leader>tr', ':Telescope live_grep<cr>')
 
 require('telescope').setup{
   defaults = {

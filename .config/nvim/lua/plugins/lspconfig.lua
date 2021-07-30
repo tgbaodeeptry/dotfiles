@@ -7,4 +7,9 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   }
 )
 
-require('lspconfig').clangd.setup {}
+local lspconfig = require('lspconfig')
+local servers = { "pyright", "clangd" }
+
+for _, lsp in ipairs(servers) do 
+  lspconfig[lsp].setup {}
+end

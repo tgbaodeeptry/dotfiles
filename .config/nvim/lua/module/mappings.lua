@@ -1,12 +1,12 @@
 local vimp = require('vimp')
 
-vimp.inoremap('jj', '<ESC>')
+vimp.imap('jj', '<ESC>')
 
 vimp.nmap('<leader>cpa', 'ggVG"+y')
 vimp.xmap('<leader>c', '"+y')
 vimp.nmap('<leader>p', '"+p')
 
-vimp.nmap('<c-m-l>', 'gg=G<c-o>')
+vimp.nmap('<c-m-l>', 'gg=G')
 
 vimp.nnoremap('<c-k>', '<c-w>k')
 vimp.nnoremap('<c-j>', '<c-w>j')
